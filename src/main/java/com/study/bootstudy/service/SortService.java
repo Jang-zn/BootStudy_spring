@@ -2,9 +2,12 @@ package com.study.bootstudy.service;
 
 import com.study.bootstudy.sort.JavaSort;
 import com.study.bootstudy.sort.Sort;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+
+@Service
 public class SortService {
 
     private final Sort<String> sort;

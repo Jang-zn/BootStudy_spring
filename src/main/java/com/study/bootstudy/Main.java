@@ -1,5 +1,7 @@
 package com.study.bootstudy;
 
+import com.study.bootstudy.config.Config;
+import com.study.bootstudy.service.SortService;
 import com.study.bootstudy.sort.BubbleSort;
 import com.study.bootstudy.sort.JavaSort;
 import com.study.bootstudy.sort.Sort;
@@ -10,13 +12,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Main {
-    ApplicationContext context = new AnnotationConfigApplicationContext();
-
-
     public static void main(String[] args) {
-        Sort<Integer> bs = new JavaSort<>();
+        ApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
+        SortService ss = context.getBean(SortService.class);
 
-        System.out.println("result = "+bs.sort(Arrays.asList(5,2,4,1,3)));
+        System.out.println("result = "+ss.doSort(Arrays.asList(args)));
 
     }
 }
