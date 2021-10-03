@@ -12,11 +12,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Main {
-    public static void main(String[] args) {
-        ApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
-        SortService ss = context.getBean(SortService.class);
-
-        System.out.println("result = "+ss.doSort(Arrays.asList(args)));
-
-    }
+//    public static void main(String[] args) {
+//        ApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
+//        SortService ss = context.getBean(SortService.class);
+//
+//        System.out.println("result = "+ss.doSort(Arrays.asList(args)));
+//
+//    }
 }
